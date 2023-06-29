@@ -1,27 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TIL</title>
 </head>
-<img src="./assets/logo.png" height="100" width="100 "alt="Logo for the website">
-<body>
-    <h1>Today I Learned!</h1>
 
-    <ul>
-        <li>
-            <p>
-                React is being developed by Meta (formerly known as Facebook)
-                <a href="https://codeinstitute.net/global/blog/what-is-react-js/#:~:text=Author%3A%20Guest%20Author-,React.,source%20community%20now%20maintain%20it.">Source</a>
-                <span>#Technology#</span>
-            </p>
-        </li>
-        <li>
-            Social media has become an integral part of modern Society, with over 3.8 billion active users worldwide.
-            <a href="https://just10facts.com/10-facts-about-society/">Source</a>
-            <span>#Society#</span>
-        </li>
-    </ul>
+<body>
+    <header>
+        <img src="./assets/logo.png" height="100" width="100 " alt="Logo for the website" />
+        <h1>Today I Learned!</h1>
+        <button>Share a fact</button>
+    </header>
+
+    <form action="">
+        <input type="text" placeholder="Share a fact with the world" />
+        <span>200</span>
+        <input type="text" placeholder="Share a source" />
+
+        <select name="" id="">
+            <option value="">Choose a Category</option>
+            <option value="science">Science</option>
+            <option value="technology">Technology</option>
+            <option value="sports">Sports</option>
+            <option value="society">Society</option>
+        </select>
+        <button>Post</button>
+
+
+    </form>
+    <main>
+        <ul>
+            <aside>
+                <li><button>All</button></li>
+                <li><button>Science</button></li>
+                <li><button>Technology</button></li>
+                <li><button>Sports</button></li>
+                <li><button>Society</button></li>
+        </ul>
+        </aside>
+
+
+
+        <section>
+            <ul>
+                <li>
+                    <p>
+                        React is being developed by Meta (formerly known as Facebook)
+                        <a href="https://codeinstitute.net/global/blog/what-is-react-js/#:~:text=Author%3A%20Guest%20Author-,React.,source%20community%20now%20maintain%20it."
+                            target="_blank">Source</a>
+                        <span>#Technology#</span>
+                    </p>
+
+                    <div>
+                        <button><strong>👍 24</strong></button>
+                        <button><strong>😡 22</strong></button>
+                        <button><strong>😮 42</strong></button>
+                    </div>
+
+                </li>
+                <li>
+                    <p>
+                        Social media has become an integral part of modern Society, with over
+                        3.8 billion active users worldwide.
+                        <a href="https://just10facts.com/10-facts-about-society/ target=_blank">Source</a>
+                        <span>#Society#</span>
+                    </p>
+
+                    <div>
+                        <button><strong>👍 24</strong></button>
+                        <button><strong>😡 9</strong></button>
+                        <button><strong>😮 4</strong></button>
+                    </div>
+
+                </li>
+
+            </ul>
+        </section>
+    </main>
 </body>
+
 </html>
