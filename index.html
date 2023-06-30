@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./style.css" />
     <title>TIL</title>
 </head>
@@ -23,36 +24,39 @@
 
         <form class="fact-form">
             <input type="text" placeholder="Share a fact with the world" />
-            <span>200</span>
             <input type="text" placeholder="Share a source" />
 
             <select name="" id="">
                 <option value="">Choose a Category</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="finance">Finance</option>
+                <option value="health">Health</option>
+                <option value="history">History</option>
+                <option value="news">News</option>
                 <option value="science">Science</option>
-                <option value="technology">Technology</option>
-                <option value="sports">Sports</option>
                 <option value="society">Society</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
             </select>
             <button class="btn post-btn">Post</button>
-
 
         </form>
         <main class="main">
             <ul>
                 <aside>
                     <li><button class="btn all-btn">All</button></li>
-                    <li><button class="btn btn-category" style="background-color:#9f1239">Science</button></li>
-                    <li><button class="btn btn-category" style="background-color:#1e1b4b">Technology</button></li>
-                    <li><button class="btn btn-category" style="background-color:#075985"">Sports</button></li>
-                    <li><button class=" btn btn-category" style="background-color:#3f6212">Society</button></li>
-                    <li><button class="btn btn-category" style="background-color:#fb923c">Finance</button></li>
                     <li><button class="btn btn-category" style="background-color:#171717">Entertainment</button></li>
+                    <li><button class="btn btn-category" style="background-color:#fb923c">Finance</button></li>
                     <li><button class="btn btn-category" style="background-color:#6b21a8">Health</button></li>
                     <li><button class="btn btn-category" style="background-color:#3f3f46">History</button></li>
                     <li><button class="btn btn-category" style="background-color:#450a0a">News</button></li>
-
+                    <li><button class="btn btn-category" style="background-color:#9f1239">Science</button></li>
+                    <li><button class="btn btn-category" style="background-color:#3f6212">Society</button></li>
+                    <li><button class="btn btn-category" style="background-color:#075985">Sports</button></li>
+                    <li><button class="btn btn-category" style="background-color:#1e1b4b">Technology</button></li>
+                </aside>
             </ul>
-            </aside>
+
 
 
 
@@ -62,7 +66,7 @@
                         <p>
                             React is being developed by Meta (formerly known as Facebook)
                             <a class="source" href="https://opensource.fb.com/" target="_blank">(Source)</a>
-                            <span class="category" style="background-color:#1e1b4b">#Technology#</span>
+                            <span class="category" style="background-color:#1e1b4b">Technology</span>
                         </p>
 
                         <div class="vote-buttons">
@@ -78,7 +82,7 @@
                             3.8 billion active users worldwide.
                             <a class="source"
                                 href="https://just10facts.com/10-facts-about-society/ target=_blank">(Source)</a>
-                            <span class="category" style="background-color: #3f6212">#Society#</span>
+                            <span class="category" style="background-color: #3f6212">Society</span>
                         </p>
 
                         <div class="vote-buttons">
