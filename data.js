@@ -1,12 +1,13 @@
 const CATEGORIES = [
-  { name: "technology", color: "#3b82f6" },
-  { name: "science", color: "#16a34a" },
-  { name: "finance", color: "#ef4444" },
-  { name: "society", color: "#eab308" },
-  { name: "entertainment", color: "#db2777" },
-  { name: "health", color: "#14b8a6" },
-  { name: "history", color: "#f97316" },
-  { name: "news", color: "#8b5cf6" },
+  { name: "technology", color: "#1e1b4b" },
+  { name: "science", color: "#9f1239" },
+  { name: "finance", color: "#fb923c" },
+  { name: "society", color: "#3f6212" },
+  { name: "entertainment", color: "#171717" },
+  { name: "health", color: "#6b21a8" },
+  { name: "history", color: "#3f3f46" },
+  { name: "news", color: "#450a0a" },
+  { name: "sports", color: "#075985" },
 ];
 
 const initialFacts = [
@@ -16,8 +17,8 @@ const initialFacts = [
     source: "https://opensource.fb.com/",
     category: "technology",
     votesInteresting: 24,
-    votesMindblowing: 9,
-    votesFalse: 4,
+    votesMindblowing: 42,
+    votesFalse: 22,
     createdIn: 2021,
   },
   {
@@ -40,6 +41,17 @@ const initialFacts = [
     votesMindblowing: 3,
     votesFalse: 1,
     createdIn: 2015,
+  },
+
+  {
+    id: 4,
+    text: "Social media has become an integral part of modern Society, with over 3.8 billion active users worldwide.",
+    source: "https://just10facts.com/10-facts-about-society",
+    category: "society",
+    votesInteresting: 24,
+    votesMindblowing: 4,
+    votesFalse: 9,
+    createdIn: 2023,
   },
 ];
 

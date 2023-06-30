@@ -4,82 +4,95 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <title>TIL</title>
 </head>
 
 <body>
-    <header>
-        <img src="./assets/logo.png" height="100" width="100 " alt="Logo for the website" />
-        <h1>Today I Learned!</h1>
-        <button>Share a fact</button>
-    </header>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="./assets/logo.png" height="100" width="100 " alt="Logo for the website" />
+                <h1>Today I Learned!</h1>
+            </div>
+            <button class="btn share-btn">Share a fact</button>
+        </header>
 
-    <form action="">
-        <input type="text" placeholder="Share a fact with the world" />
-        <span>200</span>
-        <input type="text" placeholder="Share a source" />
+        <form class="fact-form">
+            <input type="text" placeholder="Share a fact with the world" />
+            <span>200</span>
+            <input type="text" placeholder="Share a source" />
 
-        <select name="" id="">
-            <option value="">Choose a Category</option>
-            <option value="science">Science</option>
-            <option value="technology">Technology</option>
-            <option value="sports">Sports</option>
-            <option value="society">Society</option>
-        </select>
-        <button>Post</button>
-
-
-    </form>
-    <main>
-        <ul>
-            <aside>
-                <li><button>All</button></li>
-                <li><button>Science</button></li>
-                <li><button>Technology</button></li>
-                <li><button>Sports</button></li>
-                <li><button>Society</button></li>
-        </ul>
-        </aside>
+            <select name="" id="">
+                <option value="">Choose a Category</option>
+                <option value="science">Science</option>
+                <option value="technology">Technology</option>
+                <option value="sports">Sports</option>
+                <option value="society">Society</option>
+            </select>
+            <button class="btn post-btn">Post</button>
 
 
-
-        <section>
+        </form>
+        <main class="main">
             <ul>
-                <li>
-                    <p>
-                        React is being developed by Meta (formerly known as Facebook)
-                        <a href="https://codeinstitute.net/global/blog/what-is-react-js/#:~:text=Author%3A%20Guest%20Author-,React.,source%20community%20now%20maintain%20it."
-                            target="_blank">Source</a>
-                        <span>#Technology#</span>
-                    </p>
-
-                    <div>
-                        <button><strong>👍 24</strong></button>
-                        <button><strong>😡 22</strong></button>
-                        <button><strong>😮 42</strong></button>
-                    </div>
-
-                </li>
-                <li>
-                    <p>
-                        Social media has become an integral part of modern Society, with over
-                        3.8 billion active users worldwide.
-                        <a href="https://just10facts.com/10-facts-about-society/ target=_blank">Source</a>
-                        <span>#Society#</span>
-                    </p>
-
-                    <div>
-                        <button><strong>👍 24</strong></button>
-                        <button><strong>😡 9</strong></button>
-                        <button><strong>😮 4</strong></button>
-                    </div>
-
-                </li>
+                <aside>
+                    <li><button class="btn all-btn">All</button></li>
+                    <li><button class="btn btn-category" style="background-color:#9f1239">Science</button></li>
+                    <li><button class="btn btn-category" style="background-color:#1e1b4b">Technology</button></li>
+                    <li><button class="btn btn-category" style="background-color:#075985"">Sports</button></li>
+                    <li><button class=" btn btn-category" style="background-color:#3f6212">Society</button></li>
+                    <li><button class="btn btn-category" style="background-color:#fb923c">Finance</button></li>
+                    <li><button class="btn btn-category" style="background-color:#171717">Entertainment</button></li>
+                    <li><button class="btn btn-category" style="background-color:#6b21a8">Health</button></li>
+                    <li><button class="btn btn-category" style="background-color:#3f3f46">History</button></li>
+                    <li><button class="btn btn-category" style="background-color:#450a0a">News</button></li>
 
             </ul>
-        </section>
-    </main>
+            </aside>
+
+
+
+            <section>
+                <ul>
+                    <li class="facts">
+                        <p>
+                            React is being developed by Meta (formerly known as Facebook)
+                            <a class="source" href="https://opensource.fb.com/" target="_blank">(Source)</a>
+                            <span class="category" style="background-color:#1e1b4b">#Technology#</span>
+                        </p>
+
+                        <div class="vote-buttons">
+                            <button><strong>👍 24</strong></button>
+                            <button><strong>😡 22</strong></button>
+                            <button><strong>😮 42</strong></button>
+                        </div>
+
+                    </li>
+                    <li class="facts">
+                        <p>
+                            Social media has become an integral part of modern Society, with over
+                            3.8 billion active users worldwide.
+                            <a class="source"
+                                href="https://just10facts.com/10-facts-about-society/ target=_blank">(Source)</a>
+                            <span class="category" style="background-color: #3f6212">#Society#</span>
+                        </p>
+
+                        <div class="vote-buttons">
+                            <button><strong>👍 24</strong></button>
+                            <button><strong>😡 9</strong></button>
+                            <button><strong>😮 4</strong></button>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
