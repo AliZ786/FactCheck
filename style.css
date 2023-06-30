@@ -233,3 +233,7 @@ ul {
     grid-template-columns: 0.75fr;
   }
 }
+
+.hidden {
+  display: none !important;
+}
