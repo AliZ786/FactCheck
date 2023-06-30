@@ -1,0 +1,22 @@
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Mono Share Tech, monospace;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+p {
+  font: size 20px;
+  line-height: 1.5;
+  font-family: Mono Share Tech, monospace;
+}
+
+span {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
