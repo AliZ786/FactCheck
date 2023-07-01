@@ -63,44 +63,52 @@ function FactsList() {
     <section>
       <ul className="facts-list">
         {facts.map((fact) => (
-          <li className="facts" key={fact.id}>
-            <p>
-              {fact.text}
-              <a
-                className="source"
-                href={fact.source}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                (Source)
-              </a>
-              <span
-                className="category"
-                style={{
-                  backgroundColor: CATEGORIES.find(
-                    (cat) => cat.name === fact.category
-                  ).color,
-                }}
-              >
-                {fact.category}
-              </span>
-            </p>
-
-            <div className="vote-buttons">
-              <button>
-                <strong>👍 {fact.votesInteresting}</strong>
-              </button>
-              <button>
-                <strong>😡 {fact.votesFalse}</strong>
-              </button>
-              <button>
-                <strong>😮 {fact.votesMindblowing}</strong>
-              </button>
-            </div>
-          </li>
+          <Fact key={fact.id} fact={fact} />
         ))}
       </ul>
     </section>
+  );
+}
+
+function Fact(props) {
+  const { fact } = props;
+
+  return (
+    <li className="facts" key={fact.id}>
+      <p>
+        {fact.text}
+        <a
+          className="source"
+          href={fact.source}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          (Source)
+        </a>
+        <span
+          className="category"
+          style={{
+            backgroundColor: CATEGORIES.find(
+              (cat) => cat.name === fact.category
+            ).color,
+          }}
+        >
+          {fact.category}
+        </span>
+      </p>
+
+      <div className="vote-buttons">
+        <button>
+          <strong>👍 {fact.votesInteresting}</strong>
+        </button>
+        <button>
+          <strong>😡 {fact.votesFalse}</strong>
+        </button>
+        <button>
+          <strong>😮 {fact.votesMindblowing}</strong>
+        </button>
+      </div>
+    </li>
   );
 }
 
