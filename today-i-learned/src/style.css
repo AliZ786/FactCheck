@@ -6,7 +6,7 @@ h1 {
   font-weight: bold;
   font-size: 40px;
   color: #cbd5e1;
-  margin-left: 700px;
+  margin-left: 20px;
 }
 
 body {
@@ -78,11 +78,13 @@ ul {
   color: #cbd5e1;
   text-indent: 10px;
   font-size: large;
+  font-family: Roboto, sans-serif;
 }
 
 .fact-form input::placeholder {
   color: #cbd5e1;
   opacity: 0.5;
+  font-family: Roboto, sans-serif;
 }
 
 .fact-form input:first-child {

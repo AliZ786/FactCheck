@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./../../style.css";
 
 const CATEGORIES = [
@@ -17,12 +18,31 @@ export default function NewFactForm() {
     a.name.localeCompare(b.name)
   );
 
-  return (
-    <form className="fact-form">
-      <input type="text" placeholder="Share a fact with the world" />
-      <input type="text" placeholder="Share a source" />
+  const [text, setText] = useState("");
+  const [source, setSource] = useState("");
+  const [category, setCategory] = useState("");
 
-      <select name="" id="">
+  function handleSumbit(e) {
+    e.preventDefault();
+    console.log(text, source, category);
+  }
+
+  return (
+    <form className="fact-form" onSubmit={handleSumbit}>
+      <input
+        type="text"
+        placeholder="Share a fact with the world"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Share a source"
+        value={source}
+        onChange={(e) => setSource(e.target.value)}
+      />
+
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="">Choose a Category</option>
         {sortedCategories.map((category) => (
           <option key={category.name} value={category.name}>
