@@ -9,9 +9,9 @@ const CATEGORIES = [
   { name: "science", color: "#9f1239" },
   { name: "finance", color: "#fb923c" },
   { name: "society", color: "#3f6212" },
-  { name: "entertainment", color: "#171717" },
+  { name: "entertainment", color: "#0c4a6e" },
   { name: "health", color: "#6b21a8" },
-  { name: "history", color: "#3f3f46" },
+  { name: "history", color: "#2563eb" },
   { name: "news", color: "#450a0a" },
   { name: "sports", color: "#075985" },
 ];
