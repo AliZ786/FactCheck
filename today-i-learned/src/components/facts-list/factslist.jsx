@@ -1,8 +1,4 @@
-import "./App.css";
-import "./style.css";
-import FactsList from "./components/facts-list/factslist";
-import NewFactForm from "./components/fact-form/factform";
-import CategoriesDisplay from "./components/categories/categories";
+import "./../../style.css";
 
 const CATEGORIES = [
   { name: "technology", color: "#1e1b4b" },
@@ -48,7 +44,6 @@ const initialFacts = [
     votesFalse: 1,
     createdIn: 2015,
   },
-
   {
     id: 4,
     text: "Social media has become an integral part of modern Society, with over 3.8 billion active users worldwide.",
@@ -61,29 +56,52 @@ const initialFacts = [
   },
 ];
 
-function App() {
-  return (
-    <>
-      <header className="header">
-        <div className="logo">
-          <img
-            src="logo.png"
-            height="100"
-            width="100 "
-            alt="Logo for the website"
-          />
-          <h1>Today I Learned!</h1>
-        </div>
-        <button className="btn share-btn btn-open">Share a fact</button>
-      </header>
+function FactsList() {
+  const facts = initialFacts;
 
-      <NewFactForm />
-      <main className="main">
-        <CategoriesDisplay />
-        <FactsList />
-      </main>
-    </>
+  return (
+    <section>
+      <ul className="facts-list">
+        {facts.map((fact) => (
+          <li className="facts" key={fact.id}>
+            <p>
+              {fact.text}
+              <a
+                className="source"
+                href={fact.source}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                (Source)
+              </a>
+              <span
+                className="category"
+                style={{
+                  backgroundColor: CATEGORIES.find(
+                    (cat) => cat.name === fact.category
+                  ).color,
+                }}
+              >
+                {fact.category}
+              </span>
+            </p>
+
+            <div className="vote-buttons">
+              <button>
+                <strong>👍 {fact.votesInteresting}</strong>
+              </button>
+              <button>
+                <strong>😡 {fact.votesFalse}</strong>
+              </button>
+              <button>
+                <strong>😮 {fact.votesMindblowing}</strong>
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
-export default App;
+export default FactsList;
