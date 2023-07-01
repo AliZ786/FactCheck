@@ -190,7 +190,12 @@ ul {
 
 .share-btn.hover-close::after {
   content: "\f05c";
-  font-family: "Font Awesome 6 Free"; /* Updated Font Awesome font family */
+  font-family: "Font Awesome 6 Free";
+  display: none; /* Initially hide the content */
+}
+
+.share-btn.hover-close:hover::after {
+  display: flex; /* Show the content when hovering over the share-btn element */
 }
 
 .post-btn {

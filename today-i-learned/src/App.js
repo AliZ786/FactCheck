@@ -3,6 +3,8 @@ import "./style.css";
 import FactsList from "./components/facts-list/factslist";
 import NewFactForm from "./components/fact-form/factform";
 import CategoriesDisplay from "./components/categories/categories";
+import { useState } from "react";
+import Header from "./components/header/header";
 
 const CATEGORIES = [
   { name: "technology", color: "#1e1b4b" },
@@ -62,22 +64,13 @@ const initialFacts = [
 ];
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <>
-      <header className="header">
-        <div className="logo">
-          <img
-            src="logo.png"
-            height="100"
-            width="100 "
-            alt="Logo for the website"
-          />
-          <h1>Today I Learned!</h1>
-        </div>
-        <button className="btn share-btn btn-open">Share a fact</button>
-      </header>
+      <Header showForm={showForm} setShowForm={setShowForm} />
+      {showForm ? <NewFactForm /> : null}
 
-      <NewFactForm />
       <main className="main">
         <CategoriesDisplay />
         <FactsList />
