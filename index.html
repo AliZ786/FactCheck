@@ -1,103 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>TIL</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="./assets/logo.png" height="100" width="100 " alt="Logo for the website" />
-                <h1>Today I Learned!</h1>
-            </div>
-            <button class="btn share-btn btn-open">Share a fact</button>
-        </header>
+      <header class="header">
+        <div class="logo">
+          <img
+            src="./assets/logo.png"
+            height="100"
+            width="100 "
+            alt="Logo for the website"
+          />
+          <h1>Today I Learned!</h1>
+        </div>
+        <button class="btn share-btn btn-open">Share a fact</button>
+      </header>
 
-        <form class="fact-form hidden">
-            <input type="text" placeholder="Share a fact with the world" />
-            <input type="text" placeholder="Share a source" />
+      <form class="fact-form hidden">
+        <input type="text" placeholder="Share a fact with the world" />
+        <input type="text" placeholder="Share a source" />
 
-            <select name="" id="">
-                <option value="">Choose a Category</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="finance">Finance</option>
-                <option value="health">Health</option>
-                <option value="history">History</option>
-                <option value="news">News</option>
-                <option value="science">Science</option>
-                <option value="society">Society</option>
-                <option value="sports">Sports</option>
-                <option value="technology">Technology</option>
-            </select>
-            <button class="btn post-btn">Post</button>
+        <select name="" id="">
+          <option value="">Choose a Category</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="finance">Finance</option>
+          <option value="health">Health</option>
+          <option value="history">History</option>
+          <option value="news">News</option>
+          <option value="science">Science</option>
+          <option value="society">Society</option>
+          <option value="sports">Sports</option>
+          <option value="technology">Technology</option>
+        </select>
+        <button class="btn post-btn">Post</button>
+      </form>
+      <main class="main">
+        <ul>
+          <aside>
+            <li><button class="btn all-btn">All</button></li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #171717"
+              >
+                Entertainment
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #fb923c"
+              >
+                Finance
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #6b21a8"
+              >
+                Health
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #3f3f46"
+              >
+                History
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #450a0a"
+              >
+                News
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #9f1239"
+              >
+                Science
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #3f6212"
+              >
+                Society
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #075985"
+              >
+                Sports
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn btn-category"
+                style="background-color: #1e1b4b"
+              >
+                Technology
+              </button>
+            </li>
+          </aside>
+        </ul>
 
-        </form>
-        <main class="main">
-            <ul>
-                <aside>
-                    <li><button class="btn all-btn">All</button></li>
-                    <li><button class="btn btn-category" style="background-color:#171717">Entertainment</button></li>
-                    <li><button class="btn btn-category" style="background-color:#fb923c">Finance</button></li>
-                    <li><button class="btn btn-category" style="background-color:#6b21a8">Health</button></li>
-                    <li><button class="btn btn-category" style="background-color:#3f3f46">History</button></li>
-                    <li><button class="btn btn-category" style="background-color:#450a0a">News</button></li>
-                    <li><button class="btn btn-category" style="background-color:#9f1239">Science</button></li>
-                    <li><button class="btn btn-category" style="background-color:#3f6212">Society</button></li>
-                    <li><button class="btn btn-category" style="background-color:#075985">Sports</button></li>
-                    <li><button class="btn btn-category" style="background-color:#1e1b4b">Technology</button></li>
-                </aside>
-            </ul>
+        <section>
+          <ul class="facts-list">
+            <li class="facts">
+              <p>
+                React is being developed by Meta (formerly known as Facebook)
+                <a
+                  class="source"
+                  href="https://opensource.fb.com/"
+                  target="_blank"
+                  >(Source)</a
+                >
+                <span class="category" style="background-color: #1e1b4b"
+                  >Technology</span
+                >
+              </p>
 
+              <div class="vote-buttons">
+                <button><strong>👍 24</strong></button>
+                <button><strong>😡 22</strong></button>
+                <button><strong>😮 42</strong></button>
+              </div>
+            </li>
+            <li class="facts">
+              <p>
+                Social media has become an integral part of modern Society, with
+                over 3.8 billion active users worldwide.
+                <a
+                  class="source"
+                  href="https://just10facts.com/10-facts-about-society/ target=_blank"
+                  >(Source)</a
+                >
+                <span class="category" style="background-color: #3f6212"
+                  >Society</span
+                >
+              </p>
 
-
-
-            <section>
-                <ul>
-                    <li class="facts">
-                        <p>
-                            React is being developed by Meta (formerly known as Facebook)
-                            <a class="source" href="https://opensource.fb.com/" target="_blank">(Source)</a>
-                            <span class="category" style="background-color:#1e1b4b">Technology</span>
-                        </p>
-
-                        <div class="vote-buttons">
-                            <button><strong>👍 24</strong></button>
-                            <button><strong>😡 22</strong></button>
-                            <button><strong>😮 42</strong></button>
-                        </div>
-
-                    </li>
-                    <li class="facts">
-                        <p>
-                            Social media has become an integral part of modern Society, with over
-                            3.8 billion active users worldwide.
-                            <a class="source"
-                                href="https://just10facts.com/10-facts-about-society/ target=_blank">(Source)</a>
-                            <span class="category" style="background-color: #3f6212">Society</span>
-                        </p>
-
-                        <div class="vote-buttons">
-                            <button><strong>👍 24</strong></button>
-                            <button><strong>😡 9</strong></button>
-                            <button><strong>😮 4</strong></button>
-                        </div>
-
-                    </li>
-
-                </ul>
-            </section>
-        </main>
+              <div class="vote-buttons">
+                <button><strong>👍 24</strong></button>
+                <button><strong>😡 9</strong></button>
+                <button><strong>😮 4</strong></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
     </div>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
