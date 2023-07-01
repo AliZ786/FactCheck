@@ -187,6 +187,12 @@ ul {
   transform: translateY(-50%);
   font-size: 24px;
 }
+
+.share-btn.hover-close::after {
+  content: "\f05c";
+  font-family: "Font Awesome 6 Free"; /* Updated Font Awesome font family */
+}
+
 .post-btn {
   background-image: linear-gradient(135deg, #4338ca, #16a34a, #7f1d1d, #0000);
   color: #cbd5e1;
@@ -198,6 +204,12 @@ ul {
   width: 100px;
   flex-shrink: 0;
 }
+.post-btn:hover::after {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free"; /* Updated Font Awesome font family */
+  font-size: 18px;
+}
+
 .btn-category {
   width: 100%;
   background-image: none;
