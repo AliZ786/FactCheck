@@ -1,4 +1,6 @@
 import "../../style.css";
+import React from "react";
+import logo from "../../assets/png/logo-no-background.png";
 
 export default function Header(props) {
   const { showForm, setShowForm } = props;
@@ -7,7 +9,8 @@ export default function Header(props) {
     <header className="header">
       <div className="logo">
         <img
-          src="logo.png"
+          className="logo-image"
+          src={logo}
           height="100"
           width="100"
           alt="Logo for the website"

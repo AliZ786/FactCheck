@@ -1,4 +1,5 @@
 import "../../style.css";
+import React from "react";
 
 const CATEGORIES = [
   { name: "technology", color: "#1e1b4b" },
