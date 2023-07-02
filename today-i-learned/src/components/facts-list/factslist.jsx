@@ -43,6 +43,8 @@ function Fact({ fact, setFacts }) {
   const backgroundColor = category.color;
   const [isUpdating, setIsUpdating] = useState(false);
   const [votedButtons, setVotedButtons] = useState([]);
+  const isDisputed =
+    fact.votesInteresting + fact.votesMindblowing < fact.votesFalse;
 
   async function handleVote(columnName) {
     if (votedButtons.includes(columnName)) return; // Skip if already voted for the button
@@ -65,6 +67,9 @@ function Fact({ fact, setFacts }) {
   return (
     <li className="facts" key={fact.id}>
       <p>
+        {isDisputed ? (
+          <span className="disputed">[This info may be disputed]</span>
+        ) : null}
         {fact.text}
         <a
           className="source"

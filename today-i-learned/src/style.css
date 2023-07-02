@@ -61,8 +61,7 @@ ul {
   background-color: #3f3f46;
   padding: 16px;
   margin: 16px;
-  border: 3px solid #cbd5e1;
-  border-radius: 10px;
+  border-radius: 40px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -88,13 +87,13 @@ ul {
   color: #cbd5e1;
   text-indent: 10px;
   font-size: large;
-  font-family: Roboto, sans-serif;
+  font-family: "Coiny", sans-serif;
 }
 
 .fact-form input::placeholder {
   color: #cbd5e1;
   opacity: 0.5;
-  font-family: Roboto, sans-serif;
+  font-family: "Coiny", sans-serif;
 }
 
 .fact-form input:first-child {
@@ -251,6 +250,25 @@ ul {
   transform: rotate(-5deg);
 }
 
+.disputed {
+  font-weight: 700;
+  margin-right: 5px;
+  font-size: 20px;
+  color: #f43f5e;
+}
+
+.disputed:before {
+  content: "\f06a"; /* Updated Font Awesome class for the icon */
+  font-family: "Font Awesome 6 Free"; /* Updated Font Awesome font family */
+  font-size: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  margin-right: 20px;
+  margin-top: -15px;
+  color: white;
+}
+
 @media (max-width: 1200px) {
   .facts {
     flex-direction: column;
@@ -304,4 +322,17 @@ ul {
 .logo-image:hover {
   animation: break 1s linear forwards;
   transform-origin: center;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
 }
