@@ -15,7 +15,7 @@ export default function Header(props) {
           width="100"
           alt="Logo for the website"
         />
-        <h1>Today I Learned!</h1>
+        <h1>Fact Check</h1>
       </div>
       <button
         className={`btn share-btn btn-open ${showForm ? "hover-close" : ""}`}

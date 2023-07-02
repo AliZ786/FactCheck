@@ -1,4 +1,4 @@
-# TodayILearned
+# FactCheck
 
 <strong>Full Stack Web Application which allows to share facts with sources</strong>
 
