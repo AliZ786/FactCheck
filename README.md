@@ -12,9 +12,9 @@
 
 ## Tech Stack Used
 
-Frontend: `HTML, CSS, JavaScript, and React`
-Backend: `Node.Js`
-Database: `Supabase [PostgreSQL]`
+- Frontend: `HTML, CSS, JavaScript, and React`
+- Backend: `Node.Js`
+- Database: `Supabase [PostgreSQL]`
 
 ## Link to the deployed website
 
