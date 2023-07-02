@@ -18,4 +18,4 @@ Database: `Supabase [PostgreSQL]`
 
 ## Link to the deployed website
 
-To access a live demo of the webiste, please <a href="http://"> click here</a>
+To access a live demo of the webiste, please <a href="(https://fact-checks.netlify.app/)https://fact-checks.netlify.app/"> click here</a>
