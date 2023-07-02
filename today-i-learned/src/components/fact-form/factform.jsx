@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./../../style.css";
+import supabase from "../../api/supabase";
 
 const CATEGORIES = [
   { name: "technology", color: "#1e1b4b" },
@@ -13,7 +14,7 @@ const CATEGORIES = [
   { name: "sports", color: "#075985" },
 ];
 
-export default function NewFactForm() {
+function NewFactForm({ setFacts }) {
   const sortedCategories = CATEGORIES.sort((a, b) =>
     a.name.localeCompare(b.name)
   );
@@ -22,13 +23,48 @@ export default function NewFactForm() {
   const [source, setSource] = useState("");
   const [category, setCategory] = useState("");
 
-  function handleSumbit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(text, source, category);
+
+    if (text && isValidHttpUrl(source) && category) {
+      const newFact = { text, source, category };
+
+      try {
+        const { data, error } = await supabase
+          .from("facts")
+          .insert([newFact])
+          .select();
+
+        if (error) {
+          throw error;
+        }
+
+        // Update the local facts list with the new fact
+        setFacts((facts) => [data[0], ...facts]);
+
+        setText("");
+        setCategory("");
+        setSource("");
+      } catch (error) {
+        console.error("Error creating fact:", error.message);
+      }
+    }
+  }
+
+  function isValidHttpUrl(string) {
+    let url;
+
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;
+    }
+
+    return url.protocol === "http:" || url.protocol === "https:";
   }
 
   return (
-    <form className="fact-form" onSubmit={handleSumbit}>
+    <form className="fact-form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Share a fact with the world"
@@ -50,7 +86,9 @@ export default function NewFactForm() {
           </option>
         ))}
       </select>
-      <button className="btn post-btn"></button>
+      <button className="btn post-btn" type="submit"></button>
     </form>
   );
 }
+
+export default NewFactForm;

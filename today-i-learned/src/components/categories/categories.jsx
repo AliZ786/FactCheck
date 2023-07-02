@@ -12,18 +12,24 @@ const CATEGORIES = [
   { name: "sports", color: "#075985" },
 ];
 
-export default function CategoriesDisplay() {
+export default function CategoriesDisplay({ setCurrentCategory }) {
   return (
     <aside>
       <ul>
         <li>
-          <button className="btn all-btn">All</button>
+          <button
+            className="btn all-btn"
+            onClick={() => setCurrentCategory("all")}
+          >
+            All
+          </button>
         </li>
         {CATEGORIES.map((category) => (
           <li key={category.name}>
             <button
               className="btn btn-category"
               style={{ backgroundColor: category.color }}
+              onClick={() => setCurrentCategory(category.name)}
             >
               {category.name}
             </button>
