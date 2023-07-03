@@ -337,3 +337,14 @@ ul {
     padding: 24px;
   }
 }
+
+@media (max-width: 600px) {
+  .fact-form {
+    padding: 16px; /* Restored the original horizontal padding */
+  }
+
+  .fact-form input,
+  .fact-form select {
+    font-size: 14px; /* Further reduced the font size */
+  }
+}
